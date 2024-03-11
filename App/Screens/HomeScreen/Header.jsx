@@ -11,11 +11,19 @@ const Header = () => {
       <View style={styles.container}>
         {/* Profile Section */}
         <View style={styles.profileMainContainer}>
-          <View styles={styles.profileContainer}>
+          <View style={styles.profileContainer}>
             <Image source={{ uri: user?.imageUrl }} style={styles.userImage} />
             <View>
-              <Text style={{ color: Colors.WHITE }}>Welcome,</Text>
-              <Text style={{ color: Colors.WHITE, fontSize: 20 }}>
+              <Text style={{ color: Colors.WHITE, fontFamily: "outfit" }}>
+                Welcome,
+              </Text>
+              <Text
+                style={{
+                  color: Colors.WHITE,
+                  fontSize: 20,
+                  fontFamily: "outfit",
+                }}
+              >
                 {user?.fullName}
               </Text>
             </View>
@@ -23,8 +31,15 @@ const Header = () => {
           <FontAwesome name="bookmark-o" size={27} color="white" />
         </View>
         {/* Search Bar Section */}
-        <View>
-          <TextInput placeholder="Search" styles={styles.textInput} />
+        <View style={styles.searchBarContainer}>
+          <TextInput placeholder="Search" style={styles.textInput} />
+
+          <FontAwesome
+            name="search"
+            size={24}
+            color={Colors.PRIMARY}
+            style={styles.searchBtn}
+          />
         </View>
       </View>
     )
@@ -57,6 +72,20 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.WHITE,
     borderRadius: 8,
     width: "85%",
+    fontSize: 16,
+    fontFamily: "outfit",
+  },
+  searchBarContainer: {
+    marginTop: 15,
+    display: "flex",
+    flexDirection: "row",
+    gap: 10,
+    marginBottom: 10,
+  },
+  searchBtn: {
+    backgroundColor: Colors.WHITE,
+    padding: 10,
+    borderRadius: 8,
   },
   userImage: {
     width: 45,
