@@ -6,7 +6,7 @@ import BookingScreen from "../Screens/BookingScreen/BookingScreen";
 import ProfileScreen from "../Screens/ProfileScreen/ProfileScreen";
 
 import { FontAwesome } from "@expo/vector-icons";
-import Colors from "../Screens/Utils/Colors";
+import Colors from "../Utils/Colors";
 
 const Tab = createBottomTabNavigator();
 
