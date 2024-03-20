@@ -17,7 +17,7 @@ const Categories = () => {
     });
   };
   return (
-    <View style={{ marginTop: 20 }}>
+    <View style={{ marginTop: 10 }}>
       <Heading text={"Categories"} isViewAll={true} />
       <FlatList
         data={categories}
@@ -26,7 +26,7 @@ const Categories = () => {
           <View>
             <View style={styles.iconContainer}>
               <Image
-                source={{ uri: item?.image?.url }}
+                source={{ uri: item?.icon?.url }}
                 style={{ width: 30, height: 30 }}
               />
             </View>

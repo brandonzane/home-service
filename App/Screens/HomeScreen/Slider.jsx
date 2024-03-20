@@ -10,7 +10,7 @@ const Slider = () => {
   }, []);
   const getSliders = () => {
     GlobalApi.getSlider().then((resp) => {
-      // console.log("resp", resp.sliders);
+      console.log("resp", resp.sliders);
       setSlider(resp?.sliders);
     });
   };
